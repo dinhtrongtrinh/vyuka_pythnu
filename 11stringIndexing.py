@@ -4,6 +4,8 @@
 # Každé písmenko v textu má své tajné pořadové číslo, kterému říkáme INDEX.
 # POZOR: Počítače začínají vždy počítat od NULY (0), ne od jedničky!
 #
+
+idk = "ahojJakseMas"
 # Slovo:   T  A  B  O  R
 # Indexy:  0  1  2  3  4
 # 
@@ -14,11 +16,11 @@ slovo = "VOLEJBAL"
 print("--- UKÁZKA ---")
 # Vytažení jednoho písmene pomocí hranatých závorek [ ]
 print(f"První písmeno: {slovo[0]}")   # Vypíše 'V'
-print(f"Poslední písmeno: {slovo[-1]}")  # Vypíše 'L'
+print(f"Poslední písmeno: {slovo[-3]}")  # Vypíše 'L'
 
 # Krájení (Slicing) - vybírání kousku textu [od : do]
 # Pozor: Písmeno na pozici 'do' už se nepočítá!
-print(f"První 4 písmena: {slovo[0:4]}") # Vypíše 'VOLE' (indexy 0, 1, 2, 3)
+print(f"První 4 písmena: {slovo[1:6]}") # Vypíše 'VOLE' (indexy 0, 1, 2, 3)
 
 # Super tajný trik: Obrácení textu naruby pomocí [::-1]
 print(f"Slovo pozpátku: {slovo[::-1]}") # Vypíše 'LABLELOV'
