@@ -6,6 +6,12 @@
 
 # Vytvoříme krabici s názvem "hrdina" a dáme do ní text "Batman".
 # (Texty musí být vždy v uvozovkách!)
+
+
+#string
+#int
+#float
+#bool
 hrdina = "Batman"
 
 # Vytvoříme krabici s názvem "zivoty" a dáme do ní číslo 3.
@@ -37,4 +43,4 @@ print(f"Tvůj hrdina se jmenuje {hrdina} a má {zivoty} životy. ❤️")
 # ÚKOL C: Až budeš mít hotovo, smaž křížek (#) na začátku následujícího řádku 
 # a spusť program. Pokud jsi vše napsal správně, vypíše se tvá věta!
 
-# print(f"Moje oblíbené zvíře je {zvire} a je mu {vek} let. 🐾")
+print(f"Moje oblíbené zvíře je {zvire} a je mu {vek} let. 🐾")
