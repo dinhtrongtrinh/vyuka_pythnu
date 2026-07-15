@@ -5,21 +5,17 @@
 # nebo abychom prošli nějaký text písmenko po písmenu.
 
 print("--- A) OPAKOVÁNÍ PODLE ČÍSLA (Funkce range) ---")
-# Když chceme něco zopakovat, použijeme funkci range().
-# range(3) vygeneruje čísla 0, 1, 2 (počítač začíná od nuly!)
-# Proměnná 'cislo' se s každým krokem změní.
-for cislo in range(3):
+
+for cislo in range(3,86):
     print(f"Dělám klik číslo {cislo}")
 
 print("\n--- B) OPAKOVÁNÍ V ROZMEZÍ (Od - Do) ---")
-# Můžeme říct, odkud kam chceme počítat: range(od, do)
-# Pozor: Poslední číslo se už nepočítá! range(1, 4) vypíše 1, 2, 3.
-for krok in range(1, 4):
+
+for krok in range(2, 5):
     print(f"Běžím na metu {krok}")
 
 print("\n--- C) PROCHÁZENÍ TEXTU (Písmenko po písmenu) ---")
-# Smyčka umí vzít text a rozsekat ho. V každém kole nám dá jedno písmeno.
-tajny_kod = "Tabor"
+tajny_kod = "sedesatsedm"
 
 for pismeno in tajny_kod:
     print(f"Skenuji znak: {pismeno}")
