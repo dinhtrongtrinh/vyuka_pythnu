@@ -1,0 +1,59 @@
+# ==========================================
+# 1. TAHÁK: VNOŘENÉ SMYČKY (Smyčka ve smyčce)
+# ==========================================
+# Smyčka ve smyčce funguje jako hodiny:
+# Vnější smyčka jsou HODINY, vnitřní smyčka jsou MINUTY.
+# Než se hodiny posunou o 1, minuty musí oběhnout celé kolečko!
+#
+# Pomocí vnořených smyček můžeme kreslit tvary nebo mřížky.
+
+print("--- UKÁZKA: STAVĚNÍ ZDI ---")
+# Vnější smyčka určuje ŘÁDKY (patra zdi)
+for radek in range(3):
+    
+    # Vnitřní smyčka kreslí CIHLY vedle sebe v jednom řádku
+    for cihla in range(5):
+        print("🧱", end="") # Trik s end="" zakáže počítači odřádkovat!
+    
+    # Po vykreslení celé řady musíme vytisknout prázdný řádek, 
+    # abychom mohli stavět další patro.
+    print() 
+
+print("\n")
+
+
+# ==========================================
+# 2. TVŮJ ÚKOL: TRIBUNY PRO VOLEJBALOVÝ TURNAJ
+# ==========================================
+# Začíná táborový turnaj ve volejbale a chybí nám tribuny pro diváky!
+# Vaším úkolem je pomocí DVOU smyček 'for' postavit tribunu od nuly.
+# Tribuna bude mít 4 řady a v každé řadě bude 6 sedaček (znaků 🪑).
+
+print("=== STAVBA TRIBUNY ===")
+
+# KROK 1: Napiš vnější smyčku 'for', která se zopakuje 4krát (pro 4 řady).
+# Nezapomeň na dvojtečku!
+# DOPLŇ KÓD SEM:
+
+
+
+    # KROK 2: Uvnitř první smyčky (nezapomeň na odsazení!) napiš 
+    # druhou smyčku 'for', která se zopakuje 6krát (pro 6 sedaček).
+    # Pozor: Každá smyčka musí mít JINÉ počítadlo (jiný název proměnné).
+    # DOPLŇ KÓD SEM:
+
+
+
+        # KROK 3: Uvnitř vnitřní smyčky vytiskni znak "🪑".
+        # Nezapomeň do printu přidat end="", aby se sedačky skládaly vedle sebe!
+        # DOPLŇ KÓD SEM:
+
+
+
+    # KROK 4: Zpět do vnější smyčky! (Zarovnej kód pod vnitřní 'for').
+    # Přidej prázdný print(), aby každá řada tribuny odskočila dolů.
+    # DOPLŇ KÓD SEM:
+
+
+
+print("\nTribuna je hotová, turnaj může začít! 🏐")

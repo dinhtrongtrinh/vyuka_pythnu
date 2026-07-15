@@ -11,8 +11,10 @@ print("=== PŘIPOJOVÁNÍ K TREZORU ===")
 # Skrytá data v paměti trezoru
 tajna_zprava = "xX_Tajny_PoKlaD_Xx"
 pokusy = 3
+heslo_1_splneno = False
+heslo_2_splneno = False
 
-while pokusy > 0
+while pokusy > 0:
     print(f"\nZbývají pokusy: {pokusy}")
     
     # --- HACKER 1: Matematická ochrana ---
@@ -20,7 +22,7 @@ while pokusy > 0
     # Ochrana vyžaduje zbytek po dělení 17 % 5. Počítač srovnává tvůj vstup s číslem 2.
     cislo = input("Zadej výsledek (17 % 5): ")
     
-    if cislo = 2:
+    if cislo == 2:
         heslo_1_splneno = True
         print("✅ První zámek odemčen!")
     else:
@@ -33,7 +35,7 @@ while pokusy > 0
     # Nápověda k indexům: P je na pozici 9, D je na pozici 14.
     
     cast_zpravy = tajna_zprava[9:14]
-    upraveny_text = cast_zpravy.LOWER()
+    upraveny_text = cast_zpravy.lower()
 
     tip_slova = input("Zadej očištěné slovo: ")
     
