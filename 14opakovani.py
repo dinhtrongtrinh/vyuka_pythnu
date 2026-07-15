@@ -1,47 +1,50 @@
 # ==========================================
-# 🚨 MISE: OPRAVA ROZBITÉHO ROBOTA 🚨
+# 🕵️‍♂️ HACKEŘI VE DVOJICI: TREZOR TÁBORA 🕵️‍♀️
 # ==========================================
-# Náš táborový robot "R2-Dřevo" narazil do stromu a jeho kód se poškodil!
-# Najdi a oprav 6 chyb, aby robot znovu fungoval. 
-# Pokud kód spustíš a spadne to, pozorně čti červenou chybovou hlášku!
+# Trezor hlídají dva bezpečnostní systémy. První hacker musí 
+# vyřešit matematickou ochranu a druhý musí rozšifrovat text!
+# Kód obsahuje 6 záludných chyb. Najděte je, opravte je a otevřete trezor.
+# TIP: Pečlivě čtěte chybové hlášky v konzoli!
 
-print("--- STARTOVÁNÍ ROBOTA ---")
+print("=== PŘIPOJOVÁNÍ K TREZORU ===")
 
-# 1. Nastavení robota
-jmeno robota = "R2-Dřevo"
-tajne_heslo = "Tabor2026"
+# Skrytá data v paměti trezoru
+tajna_zprava = "xX_Tajny_PoKlaD_Xx"
+pokusy = 3
 
-# 2. Hlavní systém
-baterie = 3
-
-while baterie > 0
-    # Robot se snaží zjistit, co má dělat
-    akce = input("Zadej příkaz (kricet / heslo): ")
+while pokusy > 0
+    print(f"\nZbývají pokusy: {pokusy}")
     
-    # 3. Zpracování příkazu
-    if akce = "kricet":
-        # Robot má zakřičet své jméno velkými písmeny
-        print("ROBOT ŘÍKÁ:", jmeno_robota.UPPER())
-        baterie = baterie - 1
-        
-    elif akce == "heslo":
-        # Chceme zkontrolovat, jestli hráč zná první 3 písmena hesla ("Tab")
-        tip = input("Zadej první 3 písmena hesla: ")
-        
-        if tip == tajne_heslo[1:3]:
-            print("Heslo přijato! Robot je opraven.")
-            baterie = 0  # Vypne smyčku
-            opraveno = True
-        else:
-            print("Špatný kód!")
-            baterie = baterie - 1
-            
+    # --- HACKER 1: Matematická ochrana ---
+    print("[HACKER 1] Zadej bezpečnostní kód.")
+    # Ochrana vyžaduje zbytek po dělení 17 % 5. Počítač srovnává tvůj vstup s číslem 2.
+    cislo = input("Zadej výsledek (17 % 5): ")
+    
+    if cislo = 2:
+        heslo_1_splneno = True
+        print("✅ První zámek odemčen!")
     else:
-        print("Neznámý příkaz.")
-        baterie = baterie - 1
+        print("❌ Špatné číslo!")
+        pokusy = pokusy - 1
+        
+    # --- HACKER 2: Očištění dat ---
+    print("\n[HACKER 2] Rozšifruj textový klíč.")
+    # Úkol: Vyřízni ze zprávy POUZE slovo 'PoKlaD' a převeď ho na malá písmena.
+    # Nápověda k indexům: P je na pozici 9, D je na pozici 14.
+    
+    cast_zpravy = tajna_zprava[9:14]
+    upraveny_text = cast_zpravy.LOWER()
 
-# 4. Závěrečná zpráva
-if opraveno == True:
-    print("Mise úspěšná, robot tě miluje! 🤖❤️")
-else:
-    print("Robotovi došla baterie a vypnul se. 🪫")
+    tip_slova = input("Zadej očištěné slovo: ")
+    
+    if tip_slova == upraveny_text:
+        heslo_2_splneno = True
+        print("✅ Druhý zámek odemčen!")
+    else:
+        print("❌ Špatné slovo!")
+        pokusy = pokusy - 1
+        
+    # --- KONTROLA VÝHRY ---
+    if heslo_1_splneno and heslo_2_splneno:
+        print("🎉 TREZOR JE OTEVŘENÝ! Získáváte zlatý poklad! 🏆")
+        pokusy = 0  # Ukončí smyčku
