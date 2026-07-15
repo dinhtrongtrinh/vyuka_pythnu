@@ -1,52 +1,56 @@
 # ==========================================
-# 🕵️‍♂️ HACKEŘI VE DVOJICI: TREZOR TÁBORA 🕵️‍♀️
+# 📻 HACKEŘI VE DVOJICI: TÁBOROVÝ ROZHLAS 📻
 # ==========================================
-# Trezor hlídají dva bezpečnostní systémy. První hacker musí 
-# vyřešit matematickou ochranu a druhý musí rozšifrovat text!
-# Kód obsahuje 6 záludných chyb. Najděte je, opravte je a otevřete trezor.
-# TIP: Pečlivě čtěte chybové hlášky v konzoli!
+# Hlavní vedoucí zamkl táborový rozhlas! Abychom do něj mohli pustit 
+# vlastní písničky, musíme prolomit dva bezpečnostní systémy.
+# Kód obsahuje 7 chyb. Pozorně čtěte červené chybové hlášky!
 
-print("=== PŘIPOJOVÁNÍ K TREZORU ===")
+print("=== PŘIPOJOVÁNÍ K ROZHLASU ===")
 
-# Skrytá data v paměti trezoru
-tajna_zprava = "xX_Tajny_PoKlaD_Xx"
-pokusy = 3
-heslo_1_splneno = False
-heslo_2_splneno = False
+tajny_kod = "Zprava_pro_vedouci"
+pocet_pokusu = 3
 
-while pokusy > 0:
-    print(f"\nZbývají pokusy: {pokusy}")
+while pocet_pokusu > 0
+    print(f"\nZbývají pokusy: {pocet_pokusu}")
     
-    # --- HACKER 1: Matematická ochrana ---
-    print("[HACKER 1] Zadej bezpečnostní kód.")
-    # Ochrana vyžaduje zbytek po dělení 17 % 5. Počítač srovnává tvůj vstup s číslem 2.
-    cislo = input("Zadej výsledek (17 % 5): ")
+    # --- HACKER 1: Ladění frekvence (Matematika) ---
+    print("[HACKER 1] Zadej frekvenci rádia.")
+    # Frekvence musí být zbytek po dělení 25 % 7. Počítač čeká číslo 4.
+    frekvence = input("Zadej výsledek (25 % 7): ")
     
-    if cislo == 2:
-        heslo_1_splneno = True
-        print("✅ První zámek odemčen!")
+    if frekvence = 4:
+        okruh_1_hotovo = True
+        print("✅ Frekvence naladěna!")
     else:
-        print("❌ Špatné číslo!")
-        pokusy = pokusy - 1
+        print("❌ Šum a praskání...")
+        pocet_pokusu = pocet_pokusu - 1
         
-    # --- HACKER 2: Očištění dat ---
-    print("\n[HACKER 2] Rozšifruj textový klíč.")
-    # Úkol: Vyřízni ze zprávy POUZE slovo 'PoKlaD' a převeď ho na malá písmena.
-    # Nápověda k indexům: P je na pozici 9, D je na pozici 14.
+    # --- HACKER 2: Úprava kódu (Text a metody) ---
+    print("\n[HACKER 2] Získej heslo z tajného kódu.")
+    # Úkol: Z proměnné 'tajny_kod' vyřízni pouze slovo 'vedouci' 
+    # a převeď ho VŠE NA VELKÁ PÍSMENA.
+    # Nápověda k indexům: 'v' je na pozici 11, 'i' je na pozici 17.
     
-    cast_zpravy = tajna_zprava[9:14]
-    upraveny_text = cast_zpravy.lower()
-
-    tip_slova = input("Zadej očištěné slovo: ")
+    vyriznute_slovo = tajny_kod[11:17]
+    heslo_k_rozhlasu = vyriznute_slovo.UPPER()
     
-    if tip_slova == upraveny_text:
-        heslo_2_splneno = True
-        print("✅ Druhý zámek odemčen!")
+    tip = input("Zadej dešifrované heslo: ")
+    
+    if tip == heslo_k_rozhlasu:
+        okruh_2_hotovo = True
+        print("✅ Heslo přijato!")
     else:
-        print("❌ Špatné slovo!")
-        pokusy = pokusy - 1
+        print("❌ Špatné heslo!")
+        pocet_pokusu = pocet_pokusu - 1
         
-    # --- KONTROLA VÝHRY ---
-    if heslo_1_splneno and heslo_2_splneno:
-        print("🎉 TREZOR JE OTEVŘENÝ! Získáváte zlatý poklad! 🏆")
-        pokusy = 0  # Ukončí smyčku
+    # --- KONTROLA HACKU ---
+    if okruh_1_hotovo and okruh_2_hotovo:
+        print("🎉 ROZHLAS HACKNUT! Můžeme hrát! 🎵")
+        break  # Ukončí smyčku a jde se slavit
+
+# Závěrečný odpočet do vysílání (For loop)
+if okruh_1_hotovo and okruh_2_hotovo:
+    print("\nStart vysílání za:")
+    # Robot má odpočítat 5 sekund
+    for vterina in 5:
+        print(f"{vterina}...")
