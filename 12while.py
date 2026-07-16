@@ -8,6 +8,7 @@
 print("--- UKÁZKA: ODPOČÍTÁVÁNÍ K ODPALU ---")
 sekundy = 3
 
+
 # Čteme jako: DOKUD jsou sekundy větší než 0, dělej toto:
 while sekundy > 0:
     print(f"Raketa startuje za: {sekundy}...")

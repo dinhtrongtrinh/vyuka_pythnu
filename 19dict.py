@@ -12,7 +12,6 @@ tabornik = {
     "tym": "Modří",
     "body": 45
 }
-
 # 1. Čtení ze slovníku (Místo indexu [0] napíšeme jméno klíče)
 print(f"Jméno hráče: {tabornik['jmeno']}")
 

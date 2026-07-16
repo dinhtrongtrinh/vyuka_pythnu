@@ -5,7 +5,7 @@
 # 1. LIST (Seznam) = Hranaté závorky []
 # Je jako tvůj táborový batoh. Můžeš do něj přidávat věci, vyndávat je 
 # a měnit jejich pořadí.
-batoh = ["Míč", "Láhev"]
+batoh = ["Míč", "Láhev","bomby" ,"boty"]
 batoh.append("Píšťalka")  # Přidá další věc na konec
 
 # 2. TUPLE (N-tice) = Kulaté závorky ()

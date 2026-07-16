@@ -10,7 +10,7 @@
 print("--- UKÁZKA: STRÁŽCE BRÁNY ---")
 
 ma_vstupenku = True
-ma_vip_naramek = False
+ma_vip_naramek = True
 
 # AND: Musíš mít obojí
 if ma_vstupenku and ma_vip_naramek:
@@ -25,8 +25,7 @@ else:
     print("Nemáš vstupenku ani náramek, máš smůlu.")
 
 # NOT: Změní True na False a False na True
-je_noc = False
-
+je_noc = True
 if not je_noc:
     print("Je den, svítí sluníčko! ☀️")
 

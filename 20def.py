@@ -3,6 +3,12 @@
 # ==========================================
 # Funkce (začíná slovem 'def' = define) je jako továrna nebo recept.
 # Naučíš počítač nový trik, pojmenuješ ho a pak ho můžeš kdykoliv zavolat.
+a = 5
+
+def kolikrat_ahoj(a):
+    for i in range(a):
+        print("ahoj")
+
 
 print("--- A) ZÁKLADNÍ FUNKCE (Bez vstupů) ---")
 # Jen provede kód uvnitř. Nepotřebuje žádné suroviny.
