@@ -44,12 +44,16 @@ while running:
         hra1.pohyb("doprava")
     if keys[pygame.K_LEFT]:
         hra1.pohyb("doleva")
+    if keys[pygame.K_DOWN]:
+        hra1.pohyb("utok", hra2)  # Hráč 1 útočí na Hráče 2
         
     # Ovládání Hráče 2 (Klávesy A a D)
     if keys[pygame.K_d]:
         hra2.pohyb("doprava")
     if keys[pygame.K_a]:
         hra2.pohyb("doleva")
+    if keys[pygame.K_s]:
+        hra2.pohyb("utok", hra1)  # Hráč 2 útočí na Hráče 1
 
     # --- FYZIKA A AKTUALIZACE ---
     hra1.aktualizuj()
