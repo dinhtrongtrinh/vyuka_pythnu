@@ -1,33 +1,74 @@
 import pygame
-
 from hrac import Hrac
 
-# Initialize Pygame
+# 1. Inicializace Pygame
 pygame.init()
 
-# Set up the game window
+# Nastavení herního okna
 screen = pygame.display.set_mode((1400, 800))
 pygame.display.set_caption("Hello Pygame")
 
-# Game loop
-hra1 = Hrac("Hráč1",0, 0)  # Call the vykresleni method to draw the player
-hra2 = Hrac("Hráč2",0, 200)  # Create a second player with different attributes
+# Hodiny pro stabilní FPS (snímkovou frekvenci)
+clock = pygame.time.Clock()
 
-  # Create an instance of the Hrac class
+# Vytvoření instancí obou hráčů
+# (jméno, síla, x_pozice, barva)
+hra1 = Hrac("Hráč1", 10, 200, (0, 255, 0))   # Zelený hráč
+hra2 = Hrac("Hráč2", 10, 1100, (255, 0, 0))  # Červený hráč
+
 running = True
 while running:
+    # Omezení hry na stabilních 60 FPS (velmi důležité pro plynulou fyziku!)
+    clock.tick(60)
+
+    # --- INPUTY (UDÁLOSTI) ---
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
-    # 2. Vyčištění obrazovky (např. černou barvou)
-    # Bez tohoto kroku by se ti objekty "rozmazávaly" po obrazovce
+        
+        # Jednorázové stisknutí kláves (vhodné pro skok)
+        if event.type == pygame.KEYDOWN:
+            # Hráč 1 (Ovládání šipkami)
+            if event.key == pygame.K_UP:
+                hra1.pohyb("skok")
+            
+            # Hráč 2 (Ovládání WASD - klávesa W pro skok)
+            if event.key == pygame.K_w:
+                hra2.pohyb("skok")
+
+    # Kontrola držených kláves (pro plynulý pohyb do stran)
+    keys = pygame.key.get_pressed()
+    
+    # Ovládání Hráče 1 (Šipky)
+    if keys[pygame.K_RIGHT]:
+        hra1.pohyb("doprava")
+    if keys[pygame.K_LEFT]:
+        hra1.pohyb("doleva")
+        
+    # Ovládání Hráče 2 (Klávesy A a D)
+    if keys[pygame.K_d]:
+        hra2.pohyb("doprava")
+    if keys[pygame.K_a]:
+        hra2.pohyb("doleva")
+
+    # --- FYZIKA A AKTUALIZACE ---
+    hra1.aktualizuj()
+    hra2.aktualizuj()
+
+    # --- VYKRESLENÍ ---
+    # 1. Vyčištění obrazovky (černá barva)
     screen.fill((0, 0, 0)) 
 
-    # 3. Vykreslení všech herních objektů
-    hra1.vykresleni(screen)
-    hra2.vykresleni(screen)  # Draw the second player on the screen
+    # (Volitelné) Nakreslení podlahy, ať hráči nestojí ve vzduchoprázdnu
+    # Spodní hrana hráčů s výškou 300px začíná na y = 500, takže podlaha je na y = 800
+    pygame.draw.line(screen, (100, 100, 100), (0, 800), (1400, 800), 10)
 
-    # 4. AKTUALIZACE OBRAZOVKY (to nejdůležitější, co ti chybělo!)
+    # 2. Vykreslení obou hráčů
+    hra1.vykresleni(screen)
+    hra2.vykresleni(screen)  # Teď se ti správně vykreslí i druhý hráč!
+
+    # 3. Aktualizace monitoru
     pygame.display.flip()
-# Quit Pygame
+
+# Ukončení hry
 pygame.quit()
