@@ -13,17 +13,19 @@
 
 print("--- UKÁZKA Z BOJIŠTĚ ---")
 
+
+
 zivoty = 100
 poskozeni = 15
 zbyvajici_zivoty = zivoty - poskozeni
-print(f"Hrdina dostal zásah! Zbývá mu {zbyvajici_zivoty} životů.")
+#print(f"Hrdina dostal zásah! Zbývá mu {zbyvajici_zivoty} životů.")
 
 zlataky = 5
 nasobic_pokladu = 3
 celkem_zlataku = zlataky * nasobic_pokladu
-print(f"Našel jsi truhlu s násobičem! Máš {celkem_zlataku} zlaťáků.")
+#print(f"Našel jsi truhlu s násobičem! Máš {celkem_zlataku} zlaťáků.")
 
-print("\n") # Odřádkování pro přehlednost
+#print("\n") # Odřádkování pro přehlednost
 
 
 # ==========================================
@@ -38,10 +40,10 @@ print("--- TVŮJ ÚKOL ---")
 # ale pak na ni dopadla kletba, která jí 2 síly sebrala. 
 # Jaká je její konečná síla? (Nahraď nulu správným výpočtem)
 
-sila = 0
-kozelny_mec = 0
-kletba = 0
-konecna_sila = 0 
+sila = 10
+kozelny_mec = 5
+kletba = 2
+konecna_sila = sila + kozelny_mec - kletba 
 # print(f"Úkol A: Tvoje konečná síla je {konecna_sila}.")
 
 
@@ -57,7 +59,7 @@ velikost_tymu = 6
 cele_tymy = 0 
 stridacka = 0
 
-# print(f"Úkol B: Vytvoříme {cele_tymy} týmů a na střídačce zbydou {stridacka} děti.")
+print(f"Úkol B: Vytvoříme {cele_tymy} týmů a na střídačce zbydou {stridacka} děti.")
 
 
 # ÚKOL C: MAGICKÁ MOCNINA (Exponenciála)

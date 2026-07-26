@@ -33,4 +33,4 @@ print(f"Ahoj {jmeno}! Zapisuji si, že tvůj oblíbený sport je {sport}.")
 
 
 # ÚKOL C: Odkomentuj (smaž křížek #) následující řádek a spusť program!
-# print(f"Tvé tajné tábornické krycí jméno je: {barva} {zvire}!")
+print(f"Tvé tajné tábornické krycí jméno je: {barva} {zvire}!")

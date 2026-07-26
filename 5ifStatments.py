@@ -15,7 +15,7 @@
 # <=  Menší nebo rovno
 
 print("--- UKÁZKA: HLÍDAČ U TÁBORÁKU ---")
-heslo = "buřt"
+heslo = "rohlik"
 
 # Všimni si dvojtečky na konci a mezery (odsazení) na dalším řádku!
 if heslo == "buřt":
@@ -38,6 +38,7 @@ nase_body = 25
 body_soupere = 18
 
 print("--- VÝSLEDEK ZÁPASU ---")
+
 
 # ÚKOL: Napiš podmínky (if, elif, else), které porovnají 'nase_body' a 'body_soupere'.
 # Nezapomeň na dvojtečku [:] na konci podmínky a odsazení na dalším řádku!
